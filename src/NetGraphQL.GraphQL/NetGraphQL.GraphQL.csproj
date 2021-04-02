@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="4.0.2" />
+    <PackageReference Include="GraphQL.Server.Authorization.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="5.0.0" />
+    <PackageReference Include="GraphQL.Server.Transports.Subscriptions.WebSockets" Version="5.0.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Types\Request\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetGraphQL.Shared\NetGraphQL.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
