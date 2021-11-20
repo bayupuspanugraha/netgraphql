@@ -43,12 +43,14 @@ namespace NetGraphQL.Web
 
                 app.UseGraphQLPlayground(new PlaygroundOptions
                 {
-                    GraphQLEndPoint = "/api/user/graphql"
+                    GraphQLEndPoint = "/api/user/graphql",
+                    SubscriptionsEndPoint = "/api/user/graphql",
                 }, "/ui/user/playground");
 
                 app.UseGraphQLPlayground(new PlaygroundOptions
                 {
-                    GraphQLEndPoint = "/api/app/graphql"
+                    GraphQLEndPoint = "/api/app/graphql",
+                    SubscriptionsEndPoint = "/api/app/graphql",
                 }, "/ui/app/playground");
             }
 
@@ -61,10 +63,10 @@ namespace NetGraphQL.Web
             // GraphQL
             app.UseWebSockets();
              
-            app.UseGraphQLWebSockets<AppSchema>("/graphql");
+            app.UseGraphQLWebSockets<AppSchema>("/api/app/graphql");
             app.UseGraphQL<AppSchema>("/api/app/graphql");
 
-            app.UseGraphQLWebSockets<UserSchema>("/graphql");
+            app.UseGraphQLWebSockets<UserSchema>("/api/user/graphql");
             app.UseGraphQL<UserSchema>("/api/user/graphql");
 
             app.UseEndpoints(endpoints =>
