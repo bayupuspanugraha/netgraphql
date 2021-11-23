@@ -62,7 +62,7 @@ namespace NetGraphQL.Web
 
             // GraphQL
             app.UseWebSockets();
-             
+
             app.UseGraphQLWebSockets<AppSchema>("/api/app/graphql");
             app.UseGraphQL<AppSchema>("/api/app/graphql");
 

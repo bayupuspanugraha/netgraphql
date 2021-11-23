@@ -17,7 +17,7 @@ App: https://localhost:5001/ui/app/playground
 
 ## Issue:
 
-With multiple `schema`, the subscription only work for the first register (see on Startup.cs), the other subscription does not work.
+-
 
 ## License
 
